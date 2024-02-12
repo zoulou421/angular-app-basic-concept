@@ -10,6 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { MedecinComponent } from './medecin/medecin.component';
 import { AddMedecinComponent } from './add-medecin/add-medecin.component';
 import { EditMedecinComponent } from './edit-medecin/edit-medecin.component';
+import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
+import { NewProductComponent } from './new-product/new-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,10 @@ import { EditMedecinComponent } from './edit-medecin/edit-medecin.component';
     LoginComponent,
     MedecinComponent,
     AddMedecinComponent,
-    EditMedecinComponent
+    EditMedecinComponent,
+    HomeComponent,
+    ProductComponent,
+    NewProductComponent
   ],
   imports: [
     BrowserModule,

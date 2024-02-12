@@ -1,3 +1,27 @@
 <!--app-parent /-->
 <!--app-hello-world /-->
+<!--router-outlet /-->
+<nav class="p-3">
+  <ul class="nav nav-pills">
+    <li>
+      <button class="btn btn-outline-success ms-1" routerLink="/home">Home
+        <i class=" bi bi-house text-success"></i>
+      </button>
+    </li>
+
+
+    <li>
+      <button class="btn btn-outline-success ms-1" routerLink="/products">List Products
+        <i class=" bi bi-arrow-down-up text-success"></i>
+      </button>
+    </li>
+
+
+    <li>
+      <button class="btn btn-outline-success ms-1" routerLink="/newProduct">New Products
+        <i class=" bi bi-plus-circle text-success"></i>
+      </button>
+    </li>
+  </ul>
+</nav>
 <router-outlet />
