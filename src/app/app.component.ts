@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'app-mastering';
+  intervalSub:any
+  /*implements OnInit,OnDestroy
+  ngOnInit() {
+    this.intervalSub=setInterval(()=>{
+      console.log("Hello from the ngOnInit")
+    },1000);
+  }
+  ngOnDestroy() {
+    if(this.intervalSub){
+      clearInterval(this.intervalSub);
+    }
+  }*/
+
 }
