@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ProductService} from "../services/product.service";
+import {ProductModel} from "../model/product.model";
+import {Observable} from "rxjs";
 //import {HttpClientModule} from "@angular/common/http";
 
 
@@ -17,13 +19,14 @@ export class ProductComponent implements OnInit{
   constructor(private productService:ProductService) {
   }
 
-  products:Array<any>=[
+ // products:Array<ProductModel>=[
    /* {id:1,name:"Computuer",price:4500,checked:false},
     {id:1,name:"Computuer",price:4200,checked:true},
     {id:1,name:"Computuer",price:4300,checked:false}*/
-  ]
+ // ]
+  products$!:Observable<Array<ProductModel>>;
 
-  handleCheckProduct(product: any) {
+  handleCheckProduct(product: ProductModel) {
    //  this.http.patch("http://localhost:8089/products/"+product.id, {checked:!product.checked})
     //USE TEMPLATE STRING RATHER
   //  this.http.patch<any>(`http://localhost:8089/products/${product.id}`,
@@ -61,6 +64,7 @@ export class ProductComponent implements OnInit{
   //Server rendered side:
   getProducts(){
   //  this.http.get<Array<any>>("http://localhost:8089/products")
+    /* You can do this
     this.productService.getProducts()
       .subscribe({
         next:(data: any) =>{
@@ -69,6 +73,8 @@ export class ProductComponent implements OnInit{
         error:err => {
           console.log(err);
         }
-      });
+      });*/
+     //or you can do this:
+    this.products$=this.productService.getProducts()
   }
 }
