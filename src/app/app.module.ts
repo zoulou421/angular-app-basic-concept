@@ -13,6 +13,7 @@ import { EditMedecinComponent } from './edit-medecin/edit-medecin.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { NewProductComponent } from './new-product/new-product.component';
+import {HttpClientModule} from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { NewProductComponent } from './new-product/new-product.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
