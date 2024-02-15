@@ -24,7 +24,6 @@ export class AppComponent {
     {title:"New Product","route":"/newProduct", icon:"plus-circle"},
   ];
 currentAction:any;
-
   setCurrentAction(action: any) {
     this.currentAction=action;
   }
