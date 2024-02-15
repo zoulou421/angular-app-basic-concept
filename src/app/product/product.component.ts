@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {ProductService} from "../services/product.service";
 //import {HttpClientModule} from "@angular/common/http";
 
 
@@ -10,9 +11,11 @@ import {HttpClient} from "@angular/common/http";
 })
 export class ProductComponent implements OnInit{
  // private http:HttpClientModule;
-   constructor(private http:HttpClient) {
+   //constructor(private http:HttpClient) {
     // this.http=http;
-   }
+  // }
+  constructor(private productService:ProductService) {
+  }
 
   products:Array<any>=[
    /* {id:1,name:"Computuer",price:4500,checked:false},
@@ -23,8 +26,10 @@ export class ProductComponent implements OnInit{
   handleCheckProduct(product: any) {
    //  this.http.patch("http://localhost:8089/products/"+product.id, {checked:!product.checked})
     //USE TEMPLATE STRING RATHER
-    this.http.patch<any>(`http://localhost:8089/products/${product.id}`,
-      {checked:!product.checked}).subscribe({
+  //  this.http.patch<any>(`http://localhost:8089/products/${product.id}`,
+     // {checked:!product.checked})
+    this.productService.checkProduct(product)
+        .subscribe({
         next:updateProduct=>{
          // product.checked=!product.checked; it works//or else:
         /*  this.products.map(p=>{
@@ -55,7 +60,8 @@ export class ProductComponent implements OnInit{
 
   //Server rendered side:
   getProducts(){
-    this.http.get<Array<any>>("http://localhost:8089/products")
+  //  this.http.get<Array<any>>("http://localhost:8089/products")
+    this.productService.getProducts()
       .subscribe({
         next:(data: any) =>{
           this.products=data;
