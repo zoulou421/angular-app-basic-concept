@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1, "name": "Computer1", "price": 2374,"checked": true
+    },
+    {
+      "id": 2, "name": "Computer2", "price": 0,"checked": false
+    },
+    {
+      "id": 3, "name": "Computer3", "price": 0,"checked": false
+    },
+    {
+      "id": 4, "name": "Computer4", "price": 2374,"checked": true
+    },
+    {
+      "id": 5, "name": "Computer5", "price": 0,"checked": false
+    }
+  ]
+}
