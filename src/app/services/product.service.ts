@@ -28,4 +28,8 @@ export class ProductService {
       {checked:!product.checked});
   }
 
+  public deleteProduct(product:ProductModel){
+    return  this.http.delete<any>(`http://localhost:8089/products/${product.id}`);
+  }
+
 }

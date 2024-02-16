@@ -22,6 +22,12 @@
                 <i [ngClass]="product.checked?'bi bi-check':'bi bi-circle'" ></i>
               </button>
             </td>
+
+            <td>
+              <button class="btn btn-outline-danger" (click)="handleDeleteProduct(product)">
+                <i class=" bi-trash"></i>
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>

@@ -77,4 +77,12 @@ export class ProductComponent implements OnInit{
      //or you can do this:
     this.products$=this.productService.getProducts()
   }
+
+  handleDeleteProduct(product: ProductModel) {
+    this.productService.deleteProduct(product).subscribe({
+      next:value => {
+        this.getProducts();
+      }
+    })
+  }
 }

@@ -7,28 +7,16 @@
       "checked": true
     },
     {
-      "id": "2",
-      "name": "Computer2",
-      "price": 0,
-      "checked": true
-    },
-    {
       "id": "3",
       "name": "Computer3",
       "price": 0,
       "checked": true
     },
     {
-      "id": "4",
-      "name": "Computer4",
-      "price": 2374,
-      "checked": false
-    },
-    {
       "id": "5",
       "name": "Computer5",
       "price": 0,
-      "checked": false
+      "checked": true
     }
   ]
 }
