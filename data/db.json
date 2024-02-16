@@ -11,12 +11,6 @@
       "name": "Computer3",
       "price": 0,
       "checked": true
-    },
-    {
-      "id": "5",
-      "name": "Computer5",
-      "price": 0,
-      "checked": true
     }
   ]
 }

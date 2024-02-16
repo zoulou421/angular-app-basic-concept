@@ -24,7 +24,8 @@ export class ProductComponent implements OnInit{
     {id:1,name:"Computuer",price:4200,checked:true},
     {id:1,name:"Computuer",price:4300,checked:false}*/
  // ]
-  products$!:Observable<Array<ProductModel>>;
+ // products$!:Observable<Array<ProductModel>>; REPLACE AS FOLLOW:
+  products:Array<ProductModel>=[];// use it for delete also
 
   handleCheckProduct(product: ProductModel) {
    //  this.http.patch("http://localhost:8089/products/"+product.id, {checked:!product.checked})
@@ -75,13 +76,25 @@ export class ProductComponent implements OnInit{
         }
       });*/
      //or you can do this:
-    this.products$=this.productService.getProducts()
+   // this.products$=this.productService.getProducts()  REPLACE AS FOLLOW:
+    this.productService.getProducts()
+      .subscribe({
+        next:(data: any) =>{
+          this.products=data;
+        },
+        error:err => {
+          console.log(err);
+        }
+      });
+
   }
 
   handleDeleteProduct(product: ProductModel) {
+    if(confirm("Etes-vous sûr de vouloir supprimer ?"))
     this.productService.deleteProduct(product).subscribe({
       next:value => {
-        this.getProducts();
+        //this.getProducts();REPLACE AS FOLLOW:
+        this.products=this.products.filter(p=>p.id!=product.id);
       }
     })
   }
