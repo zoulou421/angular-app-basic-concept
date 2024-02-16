@@ -19,7 +19,7 @@
               <label class="form-label">Checked:</label>
               <input type="checkbox" class="form-check" formControlName="checked"/>
             </div>
-            <button class="btn btn-success">Save</button>
+            <button class="btn btn-success" [disabled]="productForm.invalid">Save</button>
           </form>
         </div>
       </div>

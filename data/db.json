@@ -16,25 +16,31 @@
       "id": "4",
       "name": "Computer1",
       "price": 2374,
-      "checked": true
+      "checked": false
     },
     {
       "id": "2",
       "name": "Computer3",
       "price": 0,
-      "checked": false
+      "checked": true
     },
     {
       "id": "5",
       "name": "Computer1",
       "price": 2374,
-      "checked": false
+      "checked": true
     },
     {
       "id": "8",
       "name": "Computer1",
       "price": 2374,
       "checked": true
+    },
+    {
+      "id": "a8fd",
+      "name": "bon",
+      "price": 0,
+      "checked": "false"
     }
   ]
 }
