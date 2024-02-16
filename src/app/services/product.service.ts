@@ -32,4 +32,7 @@ export class ProductService {
     return  this.http.delete<any>(`http://localhost:8089/products/${product.id}`);
   }
 
+  public saveProduct(product: ProductModel):Observable<ProductModel> {
+    return  this.http.post<ProductModel>(`http://localhost:8089/products`,product);
+  }
 }
