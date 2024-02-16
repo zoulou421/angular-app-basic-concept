@@ -10,13 +10,13 @@
       "id": "3",
       "name": "Computer3",
       "price": 0,
-      "checked": false
+      "checked": true
     },
     {
       "id": "4",
       "name": "Computer1",
       "price": 2374,
-      "checked": false
+      "checked": true
     },
     {
       "id": "2",

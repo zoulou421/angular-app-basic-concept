@@ -79,7 +79,8 @@ export class ProductComponent implements OnInit{
       });*/
      //or you can do this:
    // this.products$=this.productService.getProducts()  REPLACE AS FOLLOW:
-    this.productService.getProducts()
+    //this.productService.getProducts()
+    this.productService.getPaginationProducts(1,5)
       .subscribe({
         next:(data: any) =>{
           this.products=data;
@@ -90,6 +91,7 @@ export class ProductComponent implements OnInit{
       });
 
   }
+
 
   handleDeleteProduct(product: ProductModel) {
     if(confirm("Etes-vous sûr de vouloir supprimer ?"))

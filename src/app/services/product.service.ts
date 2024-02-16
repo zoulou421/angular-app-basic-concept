@@ -40,4 +40,8 @@ export class ProductService {
     return this.http.get<Array<ProductModel>>(`http://localhost:8089/products?name=${keyword}`)
 
   }
+
+  public getPaginationProducts(page:number=1, size:number=4):Observable<Array<ProductModel>>{
+    return this.http.get<Array<ProductModel>>(`http://localhost:8089/products?_page=${page}&_limit=${size}`)
+  }
 }
