@@ -16,8 +16,6 @@ export class ProductComponent implements OnInit{
    //constructor(private http:HttpClient) {
     // this.http=http;
   // }
-  constructor(private productService:ProductService) {
-  }
 
  // products:Array<ProductModel>=[
    /* {id:1,name:"Computuer",price:4500,checked:false},
@@ -25,7 +23,11 @@ export class ProductComponent implements OnInit{
     {id:1,name:"Computuer",price:4300,checked:false}*/
  // ]
  // products$!:Observable<Array<ProductModel>>; REPLACE AS FOLLOW:
-  products:Array<ProductModel>=[];// use it for delete also
+ public products:Array<ProductModel>=[];// use it for delete also
+ public keyword:string="";
+  constructor(private productService:ProductService) {
+  }
+
 
   handleCheckProduct(product: ProductModel) {
    //  this.http.patch("http://localhost:8089/products/"+product.id, {checked:!product.checked})
