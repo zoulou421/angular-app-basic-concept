@@ -35,4 +35,9 @@ export class ProductService {
   public saveProduct(product: ProductModel):Observable<ProductModel> {
     return  this.http.post<ProductModel>(`http://localhost:8089/products`,product);
   }
+
+  public searchProducts(keyword:string):Observable<Array<ProductModel>>{
+    return this.http.get<Array<ProductModel>>(`http://localhost:8089/products?name=${keyword}`)
+
+  }
 }

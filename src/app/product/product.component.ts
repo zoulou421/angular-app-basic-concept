@@ -100,4 +100,14 @@ export class ProductComponent implements OnInit{
       }
     })
   }
+
+  searchProducts() {
+   this.productService.searchProducts(this.keyword).subscribe({
+     next:value => {
+       this.products=value;
+     },error:err => {
+
+     }
+   })
+  }
 }

@@ -10,7 +10,7 @@
       "id": "3",
       "name": "Computer3",
       "price": 0,
-      "checked": true
+      "checked": false
     },
     {
       "id": "4",
@@ -40,7 +40,7 @@
       "id": "a8fd",
       "name": "bon",
       "price": 0,
-      "checked": "false"
+      "checked": true
     }
   ]
 }
